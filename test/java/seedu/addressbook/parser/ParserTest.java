@@ -23,6 +23,7 @@ import seedu.addressbook.commands.IncorrectCommand;
 import seedu.addressbook.commands.ListCommand;
 import seedu.addressbook.commands.ViewAllCommand;
 import seedu.addressbook.commands.ViewCommand;
+import seedu.addressbook.commands.RandomCommand;
 import seedu.addressbook.data.exception.IllegalValueException;
 import seedu.addressbook.data.person.Address;
 import seedu.addressbook.data.person.Email;
@@ -73,6 +74,12 @@ public class ParserTest {
     public void parse_clearCommand_parsedCorrectly() {
         final String input = "clear";
         parseAndAssertCommandType(input, ClearCommand.class);
+    }
+
+    @Test
+    public void parse_randomCommand_parsedCorrectly() {
+        final String input = "random";
+        parseAndAssertCommandType(input, RandomCommand.class);
     }
 
     @Test
